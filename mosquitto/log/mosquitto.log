@@ -1,0 +1,1060 @@
+1745510452: mosquitto version 2.0.21 starting
+1745510452: Config loaded from /mosquitto/config/mosquitto.conf.
+1745510452: Opening ipv4 listen socket on port 1883.
+1745510452: Opening ipv6 listen socket on port 1883.
+1745510452: mosquitto version 2.0.21 running
+1745510454: New connection from 172.18.0.6:40055 on port 1883.
+1745510454: New client connected from 172.18.0.6:40055 as auto-14C62DFF-F869-C3D9-0BB2-8C80473AA93F (p2, c1, k60).
+1745510686: Client auto-14C62DFF-F869-C3D9-0BB2-8C80473AA93F closed its connection.
+1745510686: mosquitto version 2.0.21 terminating
+1745510686: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745510693: mosquitto version 2.0.21 starting
+1745510693: Config loaded from /mosquitto/config/mosquitto.conf.
+1745510693: Opening ipv4 listen socket on port 1883.
+1745510693: Opening ipv6 listen socket on port 1883.
+1745510693: mosquitto version 2.0.21 running
+1745510694: New connection from 172.18.0.7:52579 on port 1883.
+1745510694: New client connected from 172.18.0.7:52579 as auto-6185E11F-85A1-83CA-3AB2-26D9A00B17CD (p2, c1, k60).
+1745511125: Client auto-6185E11F-85A1-83CA-3AB2-26D9A00B17CD closed its connection.
+1745511125: mosquitto version 2.0.21 terminating
+1745511125: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745511136: mosquitto version 2.0.21 starting
+1745511136: Config loaded from /mosquitto/config/mosquitto.conf.
+1745511136: Opening ipv4 listen socket on port 1883.
+1745511136: Opening ipv6 listen socket on port 1883.
+1745511136: mosquitto version 2.0.21 running
+1745511137: New connection from 172.18.0.6:36075 on port 1883.
+1745511137: New client connected from 172.18.0.6:36075 as auto-7DBF96FA-9619-66C4-DD18-8856ACFF6051 (p2, c1, k60).
+1745511287: Client auto-7DBF96FA-9619-66C4-DD18-8856ACFF6051 closed its connection.
+1745511287: mosquitto version 2.0.21 terminating
+1745511287: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745511307: mosquitto version 2.0.21 starting
+1745511307: Config loaded from /mosquitto/config/mosquitto.conf.
+1745511307: Opening ipv4 listen socket on port 1883.
+1745511307: Opening ipv6 listen socket on port 1883.
+1745511307: mosquitto version 2.0.21 running
+1745511308: New connection from 172.18.0.7:60377 on port 1883.
+1745511308: New client connected from 172.18.0.7:60377 as auto-A39694AE-E9B1-EBC4-A2BA-2AF83312210F (p2, c1, k60).
+1745511429: Client auto-A39694AE-E9B1-EBC4-A2BA-2AF83312210F closed its connection.
+1745511429: mosquitto version 2.0.21 terminating
+1745511429: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745511463: mosquitto version 2.0.21 starting
+1745511463: Config loaded from /mosquitto/config/mosquitto.conf.
+1745511463: Opening ipv4 listen socket on port 1883.
+1745511463: Opening ipv6 listen socket on port 1883.
+1745511463: mosquitto version 2.0.21 running
+1745511464: New connection from 172.18.0.6:33685 on port 1883.
+1745511464: New client connected from 172.18.0.6:33685 as auto-AC09E573-BBA3-00A8-3A18-0510AB4E33DD (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63338 on port 1883.
+1745511568: New client connected from 172.18.0.1:63338 as machine-1 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63350 on port 1883.
+1745511568: New client connected from 172.18.0.1:63350 as machine-2 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63352 on port 1883.
+1745511568: New client connected from 172.18.0.1:63352 as machine-3 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63362 on port 1883.
+1745511568: New client connected from 172.18.0.1:63362 as machine-4 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63364 on port 1883.
+1745511568: New client connected from 172.18.0.1:63364 as machine-5 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63370 on port 1883.
+1745511568: New client connected from 172.18.0.1:63370 as machine-6 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63386 on port 1883.
+1745511568: New client connected from 172.18.0.1:63386 as machine-7 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63396 on port 1883.
+1745511568: New client connected from 172.18.0.1:63396 as machine-8 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63410 on port 1883.
+1745511568: New client connected from 172.18.0.1:63410 as machine-9 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63418 on port 1883.
+1745511568: New client connected from 172.18.0.1:63418 as machine-10 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63424 on port 1883.
+1745511568: New client connected from 172.18.0.1:63424 as machine-11 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63440 on port 1883.
+1745511568: New client connected from 172.18.0.1:63440 as machine-12 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63444 on port 1883.
+1745511568: New client connected from 172.18.0.1:63444 as machine-13 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63448 on port 1883.
+1745511568: New client connected from 172.18.0.1:63448 as machine-14 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63460 on port 1883.
+1745511568: New client connected from 172.18.0.1:63460 as machine-15 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63462 on port 1883.
+1745511568: New client connected from 172.18.0.1:63462 as machine-16 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63474 on port 1883.
+1745511568: New client connected from 172.18.0.1:63474 as machine-17 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63480 on port 1883.
+1745511568: New client connected from 172.18.0.1:63480 as machine-18 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63488 on port 1883.
+1745511568: New client connected from 172.18.0.1:63488 as machine-19 (p2, c1, k60).
+1745511568: New connection from 172.18.0.1:63490 on port 1883.
+1745511568: New client connected from 172.18.0.1:63490 as machine-20 (p2, c1, k60).
+1745512219: Client machine-12 closed its connection.
+1745512220: Client machine-20 closed its connection.
+1745512220: Client machine-17 closed its connection.
+1745512220: Client machine-16 closed its connection.
+1745512220: Client machine-18 closed its connection.
+1745512220: Client machine-14 closed its connection.
+1745512220: Client machine-13 closed its connection.
+1745512220: Client machine-7 closed its connection.
+1745512220: Client machine-11 closed its connection.
+1745512220: Client machine-10 closed its connection.
+1745512220: Client machine-19 closed its connection.
+1745512220: Client machine-15 closed its connection.
+1745512220: Client machine-9 closed its connection.
+1745512220: Client machine-2 closed its connection.
+1745512220: Client machine-8 closed its connection.
+1745512220: Client machine-6 closed its connection.
+1745512220: Client machine-5 closed its connection.
+1745512220: Client machine-3 closed its connection.
+1745512220: Client machine-1 closed its connection.
+1745512220: Client machine-4 closed its connection.
+1745512236: Client auto-AC09E573-BBA3-00A8-3A18-0510AB4E33DD closed its connection.
+1745512236: mosquitto version 2.0.21 terminating
+1745512236: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745512320: mosquitto version 2.0.21 starting
+1745512320: Config loaded from /mosquitto/config/mosquitto.conf.
+1745512320: Opening ipv4 listen socket on port 1883.
+1745512320: Opening ipv6 listen socket on port 1883.
+1745512320: mosquitto version 2.0.21 running
+1745512321: New connection from 172.18.0.6:40711 on port 1883.
+1745512321: New client connected from 172.18.0.6:40711 as auto-2A7C4DFE-A0B4-54DC-6430-59F0A40CF9AF (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58412 on port 1883.
+1745512351: New client connected from 172.18.0.1:58412 as machine-1 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58428 on port 1883.
+1745512351: New client connected from 172.18.0.1:58428 as machine-2 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58430 on port 1883.
+1745512351: New client connected from 172.18.0.1:58430 as machine-3 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58440 on port 1883.
+1745512351: New client connected from 172.18.0.1:58440 as machine-4 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58446 on port 1883.
+1745512351: New client connected from 172.18.0.1:58446 as machine-5 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58450 on port 1883.
+1745512351: New client connected from 172.18.0.1:58450 as machine-6 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58466 on port 1883.
+1745512351: New client connected from 172.18.0.1:58466 as machine-7 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58476 on port 1883.
+1745512351: New client connected from 172.18.0.1:58476 as machine-8 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58482 on port 1883.
+1745512351: New client connected from 172.18.0.1:58482 as machine-9 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58492 on port 1883.
+1745512351: New client connected from 172.18.0.1:58492 as machine-10 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58502 on port 1883.
+1745512351: New client connected from 172.18.0.1:58502 as machine-11 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58514 on port 1883.
+1745512351: New client connected from 172.18.0.1:58514 as machine-12 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58518 on port 1883.
+1745512351: New client connected from 172.18.0.1:58518 as machine-13 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58526 on port 1883.
+1745512351: New client connected from 172.18.0.1:58526 as machine-14 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58540 on port 1883.
+1745512351: New connection from 172.18.0.1:58548 on port 1883.
+1745512351: New client connected from 172.18.0.1:58548 as machine-16 (p2, c1, k60).
+1745512351: New client connected from 172.18.0.1:58540 as machine-15 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58550 on port 1883.
+1745512351: New client connected from 172.18.0.1:58550 as machine-17 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58558 on port 1883.
+1745512351: New client connected from 172.18.0.1:58558 as machine-18 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58568 on port 1883.
+1745512351: New client connected from 172.18.0.1:58568 as machine-19 (p2, c1, k60).
+1745512351: New connection from 172.18.0.1:58582 on port 1883.
+1745512351: New client connected from 172.18.0.1:58582 as machine-20 (p2, c1, k60).
+1745512414: Client machine-13 closed its connection.
+1745512414: Client machine-20 closed its connection.
+1745512414: Client machine-18 closed its connection.
+1745512414: Client machine-17 closed its connection.
+1745512414: Client machine-19 closed its connection.
+1745512414: Client machine-16 closed its connection.
+1745512414: Client machine-15 closed its connection.
+1745512414: Client machine-14 closed its connection.
+1745512414: Client machine-4 closed its connection.
+1745512414: Client machine-12 closed its connection.
+1745512414: Client machine-11 closed its connection.
+1745512414: Client machine-10 closed its connection.
+1745512414: Client machine-7 closed its connection.
+1745512414: Client machine-6 closed its connection.
+1745512414: Client machine-1 closed its connection.
+1745512414: Client machine-9 closed its connection.
+1745512414: Client machine-5 closed its connection.
+1745512414: Client machine-3 closed its connection.
+1745512414: Client machine-8 closed its connection.
+1745512414: Client machine-2 closed its connection.
+1745512495: New connection from 172.18.0.1:60490 on port 1883.
+1745512495: New client connected from 172.18.0.1:60490 as machine-1 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60500 on port 1883.
+1745512495: New client connected from 172.18.0.1:60500 as machine-2 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60502 on port 1883.
+1745512495: New client connected from 172.18.0.1:60502 as machine-3 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60516 on port 1883.
+1745512495: New connection from 172.18.0.1:60530 on port 1883.
+1745512495: New client connected from 172.18.0.1:60516 as machine-4 (p2, c1, k60).
+1745512495: New client connected from 172.18.0.1:60530 as machine-5 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60536 on port 1883.
+1745512495: New client connected from 172.18.0.1:60536 as machine-6 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60538 on port 1883.
+1745512495: New client connected from 172.18.0.1:60538 as machine-7 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60548 on port 1883.
+1745512495: New client connected from 172.18.0.1:60548 as machine-8 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60552 on port 1883.
+1745512495: New client connected from 172.18.0.1:60552 as machine-9 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60566 on port 1883.
+1745512495: New client connected from 172.18.0.1:60566 as machine-10 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60576 on port 1883.
+1745512495: New client connected from 172.18.0.1:60576 as machine-11 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60590 on port 1883.
+1745512495: New connection from 172.18.0.1:60604 on port 1883.
+1745512495: New client connected from 172.18.0.1:60590 as machine-12 (p2, c1, k60).
+1745512495: New client connected from 172.18.0.1:60604 as machine-13 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60614 on port 1883.
+1745512495: New client connected from 172.18.0.1:60614 as machine-14 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60616 on port 1883.
+1745512495: New connection from 172.18.0.1:60618 on port 1883.
+1745512495: New client connected from 172.18.0.1:60616 as machine-15 (p2, c1, k60).
+1745512495: New client connected from 172.18.0.1:60618 as machine-16 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60632 on port 1883.
+1745512495: New connection from 172.18.0.1:60644 on port 1883.
+1745512495: New client connected from 172.18.0.1:60632 as machine-17 (p2, c1, k60).
+1745512495: New client connected from 172.18.0.1:60644 as machine-18 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60646 on port 1883.
+1745512495: New client connected from 172.18.0.1:60646 as machine-19 (p2, c1, k60).
+1745512495: New connection from 172.18.0.1:60658 on port 1883.
+1745512495: New client connected from 172.18.0.1:60658 as machine-20 (p2, c1, k60).
+1745512601: Client machine-12 closed its connection.
+1745512601: Client machine-17 closed its connection.
+1745512601: Client machine-20 closed its connection.
+1745512601: Client machine-15 closed its connection.
+1745512601: Client machine-14 closed its connection.
+1745512601: Client machine-19 closed its connection.
+1745512601: Client machine-13 closed its connection.
+1745512601: Client machine-11 closed its connection.
+1745512601: Client machine-16 closed its connection.
+1745512601: Client machine-18 closed its connection.
+1745512601: Client machine-9 closed its connection.
+1745512601: Client machine-10 closed its connection.
+1745512601: Client machine-5 closed its connection.
+1745512601: Client machine-8 closed its connection.
+1745512601: Client machine-7 closed its connection.
+1745512601: Client machine-6 closed its connection.
+1745512601: Client machine-4 closed its connection.
+1745512601: Client machine-1 closed its connection.
+1745512601: Client machine-2 closed its connection.
+1745512601: Client machine-3 closed its connection.
+1745512618: Client auto-2A7C4DFE-A0B4-54DC-6430-59F0A40CF9AF closed its connection.
+1745512618: mosquitto version 2.0.21 terminating
+1745512618: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745512651: mosquitto version 2.0.21 starting
+1745512651: Config loaded from /mosquitto/config/mosquitto.conf.
+1745512651: Opening ipv4 listen socket on port 1883.
+1745512651: Opening ipv6 listen socket on port 1883.
+1745512651: mosquitto version 2.0.21 running
+1745512653: New connection from 172.18.0.7:60835 on port 1883.
+1745512653: New client connected from 172.18.0.7:60835 as auto-3B9AF093-ABCE-DA45-FCF3-543A6D8180D2 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59228 on port 1883.
+1745512670: New client connected from 172.18.0.1:59228 as machine-1 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59242 on port 1883.
+1745512670: New client connected from 172.18.0.1:59242 as machine-2 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59244 on port 1883.
+1745512670: New client connected from 172.18.0.1:59244 as machine-3 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59256 on port 1883.
+1745512670: New client connected from 172.18.0.1:59256 as machine-4 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59264 on port 1883.
+1745512670: New client connected from 172.18.0.1:59264 as machine-5 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59278 on port 1883.
+1745512670: New client connected from 172.18.0.1:59278 as machine-6 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59280 on port 1883.
+1745512670: New client connected from 172.18.0.1:59280 as machine-7 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59292 on port 1883.
+1745512670: New connection from 172.18.0.1:59294 on port 1883.
+1745512670: New client connected from 172.18.0.1:59292 as machine-8 (p2, c1, k60).
+1745512670: New client connected from 172.18.0.1:59294 as machine-9 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59310 on port 1883.
+1745512670: New connection from 172.18.0.1:59314 on port 1883.
+1745512670: New connection from 172.18.0.1:59328 on port 1883.
+1745512670: New connection from 172.18.0.1:59342 on port 1883.
+1745512670: New connection from 172.18.0.1:59350 on port 1883.
+1745512670: New connection from 172.18.0.1:59354 on port 1883.
+1745512670: New client connected from 172.18.0.1:59310 as machine-10 (p2, c1, k60).
+1745512670: New client connected from 172.18.0.1:59314 as machine-11 (p2, c1, k60).
+1745512670: New client connected from 172.18.0.1:59328 as machine-12 (p2, c1, k60).
+1745512670: New client connected from 172.18.0.1:59342 as machine-13 (p2, c1, k60).
+1745512670: New client connected from 172.18.0.1:59350 as machine-14 (p2, c1, k60).
+1745512670: New client connected from 172.18.0.1:59354 as machine-15 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59364 on port 1883.
+1745512670: New connection from 172.18.0.1:59368 on port 1883.
+1745512670: New connection from 172.18.0.1:59374 on port 1883.
+1745512670: New client connected from 172.18.0.1:59364 as machine-16 (p2, c1, k60).
+1745512670: New client connected from 172.18.0.1:59368 as machine-17 (p2, c1, k60).
+1745512670: New client connected from 172.18.0.1:59374 as machine-18 (p2, c1, k60).
+1745512670: New connection from 172.18.0.1:59390 on port 1883.
+1745512670: New connection from 172.18.0.1:59392 on port 1883.
+1745512670: New client connected from 172.18.0.1:59390 as machine-19 (p2, c1, k60).
+1745512670: New client connected from 172.18.0.1:59392 as machine-20 (p2, c1, k60).
+1745512867: Client machine-20 closed its connection.
+1745512867: Client machine-13 closed its connection.
+1745512867: Client machine-18 closed its connection.
+1745512867: Client machine-19 closed its connection.
+1745512867: Client machine-17 closed its connection.
+1745512867: Client machine-12 closed its connection.
+1745512867: Client machine-16 closed its connection.
+1745512867: Client machine-11 closed its connection.
+1745512867: Client machine-15 closed its connection.
+1745512867: Client machine-14 closed its connection.
+1745512867: Client machine-7 closed its connection.
+1745512867: Client machine-8 closed its connection.
+1745512867: Client machine-3 closed its connection.
+1745512867: Client machine-10 closed its connection.
+1745512867: Client machine-9 closed its connection.
+1745512867: Client machine-5 closed its connection.
+1745512867: Client machine-4 closed its connection.
+1745512867: Client machine-6 closed its connection.
+1745512867: Client machine-2 closed its connection.
+1745512867: Client machine-1 closed its connection.
+1745512884: Client auto-3B9AF093-ABCE-DA45-FCF3-543A6D8180D2 closed its connection.
+1745512884: mosquitto version 2.0.21 terminating
+1745512884: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745512929: mosquitto version 2.0.21 starting
+1745512929: Config loaded from /mosquitto/config/mosquitto.conf.
+1745512929: Opening ipv4 listen socket on port 1883.
+1745512929: Opening ipv6 listen socket on port 1883.
+1745512929: mosquitto version 2.0.21 running
+1745512931: New connection from 172.18.0.7:38219 on port 1883.
+1745512931: New client connected from 172.18.0.7:38219 as auto-7DC5FBAB-DDF4-605A-BCEE-D71BBAAF4876 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:65152 on port 1883.
+1745512948: New client connected from 172.18.0.1:65152 as machine-1 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:65158 on port 1883.
+1745512948: New client connected from 172.18.0.1:65158 as machine-2 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62458 on port 1883.
+1745512948: New client connected from 172.18.0.1:62458 as machine-3 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62460 on port 1883.
+1745512948: New client connected from 172.18.0.1:62460 as machine-4 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62466 on port 1883.
+1745512948: New client connected from 172.18.0.1:62466 as machine-5 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62476 on port 1883.
+1745512948: New connection from 172.18.0.1:62490 on port 1883.
+1745512948: New client connected from 172.18.0.1:62476 as machine-6 (p2, c1, k60).
+1745512948: New client connected from 172.18.0.1:62490 as machine-7 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62500 on port 1883.
+1745512948: New client connected from 172.18.0.1:62500 as machine-8 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62504 on port 1883.
+1745512948: New client connected from 172.18.0.1:62504 as machine-9 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62514 on port 1883.
+1745512948: New client connected from 172.18.0.1:62514 as machine-10 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62518 on port 1883.
+1745512948: New client connected from 172.18.0.1:62518 as machine-11 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62522 on port 1883.
+1745512948: New connection from 172.18.0.1:62538 on port 1883.
+1745512948: New client connected from 172.18.0.1:62522 as machine-12 (p2, c1, k60).
+1745512948: New client connected from 172.18.0.1:62538 as machine-13 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62542 on port 1883.
+1745512948: New client connected from 172.18.0.1:62542 as machine-14 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62550 on port 1883.
+1745512948: New connection from 172.18.0.1:62562 on port 1883.
+1745512948: New client connected from 172.18.0.1:62550 as machine-15 (p2, c1, k60).
+1745512948: New client connected from 172.18.0.1:62562 as machine-16 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62570 on port 1883.
+1745512948: New connection from 172.18.0.1:62574 on port 1883.
+1745512948: New client connected from 172.18.0.1:62574 as machine-18 (p2, c1, k60).
+1745512948: New client connected from 172.18.0.1:62570 as machine-17 (p2, c1, k60).
+1745512948: New connection from 172.18.0.1:62580 on port 1883.
+1745512948: New connection from 172.18.0.1:62594 on port 1883.
+1745512948: New client connected from 172.18.0.1:62580 as machine-19 (p2, c1, k60).
+1745512948: New client connected from 172.18.0.1:62594 as machine-20 (p2, c1, k60).
+1745512984: Client machine-18 closed its connection.
+1745512984: Client machine-19 closed its connection.
+1745512984: Client machine-20 closed its connection.
+1745512984: Client machine-17 closed its connection.
+1745512984: Client machine-11 closed its connection.
+1745512984: Client machine-12 closed its connection.
+1745512984: Client machine-14 closed its connection.
+1745512984: Client machine-7 closed its connection.
+1745512984: Client machine-10 closed its connection.
+1745512984: Client machine-9 closed its connection.
+1745512984: Client machine-8 closed its connection.
+1745512984: Client machine-6 closed its connection.
+1745512984: Client machine-5 closed its connection.
+1745512984: Client machine-4 closed its connection.
+1745512984: Client machine-13 closed its connection.
+1745512984: Client machine-15 closed its connection.
+1745512984: Client machine-16 closed its connection.
+1745512984: Client machine-3 closed its connection.
+1745512984: Client machine-1 closed its connection.
+1745512984: Client machine-2 closed its connection.
+1745513003: Client auto-7DC5FBAB-DDF4-605A-BCEE-D71BBAAF4876 closed its connection.
+1745513004: mosquitto version 2.0.21 terminating
+1745513004: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745513023: mosquitto version 2.0.21 starting
+1745513023: Config loaded from /mosquitto/config/mosquitto.conf.
+1745513023: Opening ipv4 listen socket on port 1883.
+1745513023: Opening ipv6 listen socket on port 1883.
+1745513023: mosquitto version 2.0.21 running
+1745513025: New connection from 172.18.0.7:39099 on port 1883.
+1745513025: New client connected from 172.18.0.7:39099 as auto-409F687E-75C2-AB86-B352-862F3740F7A8 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58830 on port 1883.
+1745513033: New client connected from 172.18.0.1:58830 as machine-1 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58838 on port 1883.
+1745513033: New client connected from 172.18.0.1:58838 as machine-2 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58852 on port 1883.
+1745513033: New client connected from 172.18.0.1:58852 as machine-3 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58866 on port 1883.
+1745513033: New connection from 172.18.0.1:58882 on port 1883.
+1745513033: New client connected from 172.18.0.1:58866 as machine-4 (p2, c1, k60).
+1745513033: New client connected from 172.18.0.1:58882 as machine-5 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58884 on port 1883.
+1745513033: New client connected from 172.18.0.1:58884 as machine-6 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58898 on port 1883.
+1745513033: New client connected from 172.18.0.1:58898 as machine-7 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58908 on port 1883.
+1745513033: New connection from 172.18.0.1:58920 on port 1883.
+1745513033: New client connected from 172.18.0.1:58908 as machine-8 (p2, c1, k60).
+1745513033: New client connected from 172.18.0.1:58920 as machine-9 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58928 on port 1883.
+1745513033: New connection from 172.18.0.1:58940 on port 1883.
+1745513033: New client connected from 172.18.0.1:58928 as machine-10 (p2, c1, k60).
+1745513033: New client connected from 172.18.0.1:58940 as machine-11 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58952 on port 1883.
+1745513033: New client connected from 172.18.0.1:58952 as machine-12 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58966 on port 1883.
+1745513033: New client connected from 172.18.0.1:58966 as machine-13 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58968 on port 1883.
+1745513033: New client connected from 172.18.0.1:58968 as machine-14 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58984 on port 1883.
+1745513033: New client connected from 172.18.0.1:58984 as machine-15 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:58998 on port 1883.
+1745513033: New client connected from 172.18.0.1:58998 as machine-16 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:59002 on port 1883.
+1745513033: New client connected from 172.18.0.1:59002 as machine-17 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:59006 on port 1883.
+1745513033: New connection from 172.18.0.1:59022 on port 1883.
+1745513033: New client connected from 172.18.0.1:59006 as machine-19 (p2, c1, k60).
+1745513033: New client connected from 172.18.0.1:59022 as machine-18 (p2, c1, k60).
+1745513033: New connection from 172.18.0.1:59038 on port 1883.
+1745513033: New client connected from 172.18.0.1:59038 as machine-20 (p2, c1, k60).
+1745513103: Client machine-15 closed its connection.
+1745513103: Client machine-20 closed its connection.
+1745513103: Client machine-19 closed its connection.
+1745513103: Client machine-14 closed its connection.
+1745513103: Client machine-17 closed its connection.
+1745513103: Client machine-16 closed its connection.
+1745513103: Client machine-13 closed its connection.
+1745513103: Client machine-18 closed its connection.
+1745513103: Client machine-10 closed its connection.
+1745513103: Client machine-1 closed its connection.
+1745513103: Client machine-9 closed its connection.
+1745513103: Client machine-8 closed its connection.
+1745513103: Client machine-11 closed its connection.
+1745513103: Client machine-12 closed its connection.
+1745513103: Client machine-2 closed its connection.
+1745513103: Client machine-3 closed its connection.
+1745513103: Client machine-4 closed its connection.
+1745513103: Client machine-5 closed its connection.
+1745513103: Client machine-6 closed its connection.
+1745513103: Client machine-7 closed its connection.
+1745513119: Client auto-409F687E-75C2-AB86-B352-862F3740F7A8 closed its connection.
+1745513119: mosquitto version 2.0.21 terminating
+1745513119: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745513137: mosquitto version 2.0.21 starting
+1745513137: Config loaded from /mosquitto/config/mosquitto.conf.
+1745513137: Opening ipv4 listen socket on port 1883.
+1745513137: Opening ipv6 listen socket on port 1883.
+1745513137: mosquitto version 2.0.21 running
+1745513138: New connection from 172.18.0.7:33745 on port 1883.
+1745513138: New client connected from 172.18.0.7:33745 as auto-E388DDEF-54E2-6F5E-3748-8E1D0624B148 (p2, c1, k60).
+1745513142: New connection from 172.18.0.1:60332 on port 1883.
+1745513142: New connection from 172.18.0.1:60338 on port 1883.
+1745513142: New client connected from 172.18.0.1:60332 as machine-1 (p2, c1, k60).
+1745513142: New client connected from 172.18.0.1:60338 as machine-2 (p2, c1, k60).
+1745513142: New connection from 172.18.0.1:60348 on port 1883.
+1745513142: New connection from 172.18.0.1:60364 on port 1883.
+1745513142: New connection from 172.18.0.1:60368 on port 1883.
+1745513142: New client connected from 172.18.0.1:60348 as machine-3 (p2, c1, k60).
+1745513142: New client connected from 172.18.0.1:60364 as machine-4 (p2, c1, k60).
+1745513142: New client connected from 172.18.0.1:60368 as machine-5 (p2, c1, k60).
+1745513142: New connection from 172.18.0.1:60380 on port 1883.
+1745513142: New connection from 172.18.0.1:60384 on port 1883.
+1745513142: New client connected from 172.18.0.1:60380 as machine-6 (p2, c1, k60).
+1745513142: New client connected from 172.18.0.1:60384 as machine-7 (p2, c1, k60).
+1745513142: New connection from 172.18.0.1:60392 on port 1883.
+1745513142: New client connected from 172.18.0.1:60392 as machine-8 (p2, c1, k60).
+1745513142: New connection from 172.18.0.1:60394 on port 1883.
+1745513142: New client connected from 172.18.0.1:60394 as machine-9 (p2, c1, k60).
+1745513142: New connection from 172.18.0.1:60408 on port 1883.
+1745513142: New client connected from 172.18.0.1:60408 as machine-10 (p2, c1, k60).
+1745513142: New connection from 172.18.0.1:60424 on port 1883.
+1745513142: New connection from 172.18.0.1:60430 on port 1883.
+1745513142: New client connected from 172.18.0.1:60424 as machine-11 (p2, c1, k60).
+1745513142: New client connected from 172.18.0.1:60430 as machine-12 (p2, c1, k60).
+1745513142: New connection from 172.18.0.1:60446 on port 1883.
+1745513142: New connection from 172.18.0.1:60458 on port 1883.
+1745513142: New client connected from 172.18.0.1:60446 as machine-13 (p2, c1, k60).
+1745513142: New client connected from 172.18.0.1:60458 as machine-14 (p2, c1, k60).
+1745513142: New connection from 172.18.0.1:60460 on port 1883.
+1745513142: New connection from 172.18.0.1:60470 on port 1883.
+1745513142: New client connected from 172.18.0.1:60460 as machine-15 (p2, c1, k60).
+1745513142: New client connected from 172.18.0.1:60470 as machine-16 (p2, c1, k60).
+1745513142: New connection from 172.18.0.1:60472 on port 1883.
+1745513142: New client connected from 172.18.0.1:60472 as machine-17 (p2, c1, k60).
+1745513143: New connection from 172.18.0.1:60484 on port 1883.
+1745513143: New client connected from 172.18.0.1:60484 as machine-18 (p2, c1, k60).
+1745513143: New connection from 172.18.0.1:60488 on port 1883.
+1745513143: New client connected from 172.18.0.1:60488 as machine-19 (p2, c1, k60).
+1745513143: New connection from 172.18.0.1:60496 on port 1883.
+1745513143: New client connected from 172.18.0.1:60496 as machine-20 (p2, c1, k60).
+1745513197: Client machine-16 closed its connection.
+1745513197: Client machine-20 closed its connection.
+1745513197: Client machine-19 closed its connection.
+1745513197: Client machine-18 closed its connection.
+1745513197: Client machine-17 closed its connection.
+1745513197: Client machine-5 closed its connection.
+1745513197: Client machine-15 closed its connection.
+1745513197: Client machine-14 closed its connection.
+1745513197: Client machine-13 closed its connection.
+1745513197: Client machine-10 closed its connection.
+1745513197: Client machine-8 closed its connection.
+1745513197: Client machine-7 closed its connection.
+1745513197: Client machine-6 closed its connection.
+1745513197: Client machine-12 closed its connection.
+1745513197: Client machine-11 closed its connection.
+1745513197: Client machine-9 closed its connection.
+1745513197: Client machine-4 closed its connection.
+1745513197: Client machine-3 closed its connection.
+1745513197: Client machine-1 closed its connection.
+1745513197: Client machine-2 closed its connection.
+1745513215: Client auto-E388DDEF-54E2-6F5E-3748-8E1D0624B148 closed its connection.
+1745513215: mosquitto version 2.0.21 terminating
+1745513215: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745513236: mosquitto version 2.0.21 starting
+1745513236: Config loaded from /mosquitto/config/mosquitto.conf.
+1745513236: Opening ipv4 listen socket on port 1883.
+1745513236: Opening ipv6 listen socket on port 1883.
+1745513236: mosquitto version 2.0.21 running
+1745513237: New connection from 172.18.0.7:34201 on port 1883.
+1745513237: New client connected from 172.18.0.7:34201 as auto-2BD889FC-958A-D070-9CD1-C607C24C698F (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65380 on port 1883.
+1745513246: New client connected from 172.18.0.1:65380 as machine-1 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65396 on port 1883.
+1745513246: New client connected from 172.18.0.1:65396 as machine-2 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65402 on port 1883.
+1745513246: New client connected from 172.18.0.1:65402 as machine-3 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65412 on port 1883.
+1745513246: New client connected from 172.18.0.1:65412 as machine-4 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65428 on port 1883.
+1745513246: New client connected from 172.18.0.1:65428 as machine-5 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65430 on port 1883.
+1745513246: New client connected from 172.18.0.1:65430 as machine-6 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65444 on port 1883.
+1745513246: New client connected from 172.18.0.1:65444 as machine-7 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65446 on port 1883.
+1745513246: New client connected from 172.18.0.1:65446 as machine-8 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65454 on port 1883.
+1745513246: New client connected from 172.18.0.1:65454 as machine-9 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65466 on port 1883.
+1745513246: New client connected from 172.18.0.1:65466 as machine-10 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65468 on port 1883.
+1745513246: New client connected from 172.18.0.1:65468 as machine-11 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65484 on port 1883.
+1745513246: New client connected from 172.18.0.1:65484 as machine-12 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65488 on port 1883.
+1745513246: New client connected from 172.18.0.1:65488 as machine-13 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65500 on port 1883.
+1745513246: New connection from 172.18.0.1:65508 on port 1883.
+1745513246: New connection from 172.18.0.1:65512 on port 1883.
+1745513246: New client connected from 172.18.0.1:65500 as machine-14 (p2, c1, k60).
+1745513246: New client connected from 172.18.0.1:65508 as machine-15 (p2, c1, k60).
+1745513246: New client connected from 172.18.0.1:65512 as machine-16 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65520 on port 1883.
+1745513246: New client connected from 172.18.0.1:65520 as machine-17 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65528 on port 1883.
+1745513246: New client connected from 172.18.0.1:65528 as machine-18 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65530 on port 1883.
+1745513246: New client connected from 172.18.0.1:65530 as machine-19 (p2, c1, k60).
+1745513246: New connection from 172.18.0.1:65534 on port 1883.
+1745513246: New client connected from 172.18.0.1:65534 as machine-20 (p2, c1, k60).
+1745513359: Client machine-11 closed its connection.
+1745513359: Client machine-17 closed its connection.
+1745513359: Client machine-18 closed its connection.
+1745513359: Client machine-12 closed its connection.
+1745513359: Client machine-20 closed its connection.
+1745513359: Client machine-14 closed its connection.
+1745513359: Client machine-13 closed its connection.
+1745513359: Client machine-15 closed its connection.
+1745513359: Client machine-16 closed its connection.
+1745513359: Client machine-7 closed its connection.
+1745513359: Client machine-10 closed its connection.
+1745513359: Client machine-9 closed its connection.
+1745513359: Client machine-19 closed its connection.
+1745513359: Client machine-8 closed its connection.
+1745513359: Client machine-1 closed its connection.
+1745513359: Client machine-3 closed its connection.
+1745513359: Client machine-2 closed its connection.
+1745513359: Client machine-5 closed its connection.
+1745513359: Client machine-4 closed its connection.
+1745513359: Client machine-6 closed its connection.
+1745513597: Client auto-2BD889FC-958A-D070-9CD1-C607C24C698F closed its connection.
+1745513597: mosquitto version 2.0.21 terminating
+1745513597: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745513626: mosquitto version 2.0.21 starting
+1745513626: Config loaded from /mosquitto/config/mosquitto.conf.
+1745513626: Opening ipv4 listen socket on port 1883.
+1745513626: Opening ipv6 listen socket on port 1883.
+1745513626: mosquitto version 2.0.21 running
+1745513628: New connection from 172.18.0.6:48225 on port 1883.
+1745513628: New client connected from 172.18.0.6:48225 as auto-964AE03E-F97E-8AC6-58DA-7E6D89ECA0A3 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62546 on port 1883.
+1745513664: New client connected from 172.18.0.1:62546 as machine-1 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62562 on port 1883.
+1745513664: New client connected from 172.18.0.1:62562 as machine-2 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62570 on port 1883.
+1745513664: New client connected from 172.18.0.1:62570 as machine-3 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62582 on port 1883.
+1745513664: New client connected from 172.18.0.1:62582 as machine-4 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62588 on port 1883.
+1745513664: New client connected from 172.18.0.1:62588 as machine-5 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62604 on port 1883.
+1745513664: New client connected from 172.18.0.1:62604 as machine-6 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62610 on port 1883.
+1745513664: New client connected from 172.18.0.1:62610 as machine-7 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62618 on port 1883.
+1745513664: New client connected from 172.18.0.1:62618 as machine-8 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62632 on port 1883.
+1745513664: New client connected from 172.18.0.1:62632 as machine-9 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62648 on port 1883.
+1745513664: New client connected from 172.18.0.1:62648 as machine-10 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62652 on port 1883.
+1745513664: New client connected from 172.18.0.1:62652 as machine-11 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62662 on port 1883.
+1745513664: New client connected from 172.18.0.1:62662 as machine-12 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62674 on port 1883.
+1745513664: New connection from 172.18.0.1:62680 on port 1883.
+1745513664: New client connected from 172.18.0.1:62674 as machine-13 (p2, c1, k60).
+1745513664: New client connected from 172.18.0.1:62680 as machine-14 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62686 on port 1883.
+1745513664: New client connected from 172.18.0.1:62686 as machine-15 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62688 on port 1883.
+1745513664: New client connected from 172.18.0.1:62688 as machine-16 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62692 on port 1883.
+1745513664: New client connected from 172.18.0.1:62692 as machine-17 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62698 on port 1883.
+1745513664: New connection from 172.18.0.1:62710 on port 1883.
+1745513664: New client connected from 172.18.0.1:62710 as machine-19 (p2, c1, k60).
+1745513664: New client connected from 172.18.0.1:62698 as machine-18 (p2, c1, k60).
+1745513664: New connection from 172.18.0.1:62718 on port 1883.
+1745513664: New client connected from 172.18.0.1:62718 as machine-20 (p2, c1, k60).
+1745513756: Client machine-16 closed its connection.
+1745513756: Client machine-19 closed its connection.
+1745513756: Client machine-18 closed its connection.
+1745513756: Client machine-20 closed its connection.
+1745513756: Client machine-15 closed its connection.
+1745513756: Client machine-17 closed its connection.
+1745513756: Client machine-14 closed its connection.
+1745513756: Client machine-13 closed its connection.
+1745513756: Client machine-4 closed its connection.
+1745513756: Client machine-10 closed its connection.
+1745513756: Client machine-12 closed its connection.
+1745513756: Client machine-11 closed its connection.
+1745513756: Client machine-8 closed its connection.
+1745513756: Client machine-9 closed its connection.
+1745513756: Client machine-6 closed its connection.
+1745513756: Client machine-7 closed its connection.
+1745513756: Client machine-5 closed its connection.
+1745513756: Client machine-1 closed its connection.
+1745513756: Client machine-3 closed its connection.
+1745513756: Client machine-2 closed its connection.
+1745513772: Client auto-964AE03E-F97E-8AC6-58DA-7E6D89ECA0A3 closed its connection.
+1745513772: mosquitto version 2.0.21 terminating
+1745513772: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745513783: mosquitto version 2.0.21 starting
+1745513783: Config loaded from /mosquitto/config/mosquitto.conf.
+1745513783: Opening ipv4 listen socket on port 1883.
+1745513783: Opening ipv6 listen socket on port 1883.
+1745513783: mosquitto version 2.0.21 running
+1745513784: New connection from 172.18.0.7:46703 on port 1883.
+1745513784: New client connected from 172.18.0.7:46703 as auto-5B0B50D6-8197-964D-E42D-190BEEF88494 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61028 on port 1883.
+1745513788: New client connected from 172.18.0.1:61028 as machine-1 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61036 on port 1883.
+1745513788: New client connected from 172.18.0.1:61036 as machine-2 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61048 on port 1883.
+1745513788: New connection from 172.18.0.1:61046 on port 1883.
+1745513788: New connection from 172.18.0.1:61076 on port 1883.
+1745513788: New client connected from 172.18.0.1:61048 as machine-4 (p2, c1, k60).
+1745513788: New client connected from 172.18.0.1:61046 as machine-3 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61082 on port 1883.
+1745513788: New connection from 172.18.0.1:61088 on port 1883.
+1745513788: New client connected from 172.18.0.1:61076 as machine-5 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61092 on port 1883.
+1745513788: New client connected from 172.18.0.1:61082 as machine-6 (p2, c1, k60).
+1745513788: New client connected from 172.18.0.1:61088 as machine-7 (p2, c1, k60).
+1745513788: New client connected from 172.18.0.1:61092 as machine-8 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61094 on port 1883.
+1745513788: New connection from 172.18.0.1:61100 on port 1883.
+1745513788: New connection from 172.18.0.1:61108 on port 1883.
+1745513788: New client connected from 172.18.0.1:61094 as machine-9 (p2, c1, k60).
+1745513788: New client connected from 172.18.0.1:61100 as machine-10 (p2, c1, k60).
+1745513788: New client connected from 172.18.0.1:61108 as machine-11 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61124 on port 1883.
+1745513788: New connection from 172.18.0.1:61134 on port 1883.
+1745513788: New connection from 172.18.0.1:61136 on port 1883.
+1745513788: New connection from 172.18.0.1:61138 on port 1883.
+1745513788: New client connected from 172.18.0.1:61124 as machine-12 (p2, c1, k60).
+1745513788: New client connected from 172.18.0.1:61134 as machine-13 (p2, c1, k60).
+1745513788: New client connected from 172.18.0.1:61136 as machine-14 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61152 on port 1883.
+1745513788: New client connected from 172.18.0.1:61138 as machine-15 (p2, c1, k60).
+1745513788: New client connected from 172.18.0.1:61152 as machine-16 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61168 on port 1883.
+1745513788: New client connected from 172.18.0.1:61168 as machine-17 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61174 on port 1883.
+1745513788: New client connected from 172.18.0.1:61174 as machine-18 (p2, c1, k60).
+1745513788: New connection from 172.18.0.1:61182 on port 1883.
+1745513788: New connection from 172.18.0.1:61190 on port 1883.
+1745513788: New client connected from 172.18.0.1:61182 as machine-19 (p2, c1, k60).
+1745513788: New client connected from 172.18.0.1:61190 as machine-20 (p2, c1, k60).
+1745514020: Client machine-13 closed its connection.
+1745514020: Client machine-18 closed its connection.
+1745514020: Client machine-16 closed its connection.
+1745514020: Client machine-20 closed its connection.
+1745514020: Client machine-15 closed its connection.
+1745514020: Client machine-14 closed its connection.
+1745514020: Client machine-19 closed its connection.
+1745514020: Client machine-17 closed its connection.
+1745514020: Client machine-6 closed its connection.
+1745514020: Client machine-8 closed its connection.
+1745514020: Client machine-12 closed its connection.
+1745514020: Client machine-5 closed its connection.
+1745514020: Client machine-10 closed its connection.
+1745514020: Client machine-7 closed its connection.
+1745514020: Client machine-11 closed its connection.
+1745514020: Client machine-9 closed its connection.
+1745514020: Client machine-4 closed its connection.
+1745514020: Client machine-1 closed its connection.
+1745514020: Client machine-2 closed its connection.
+1745514020: Client machine-3 closed its connection.
+1745514118: New connection from 172.18.0.1:55800 on port 1883.
+1745514118: New client connected from 172.18.0.1:55800 as machine-1 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55804 on port 1883.
+1745514118: New client connected from 172.18.0.1:55804 as machine-2 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55806 on port 1883.
+1745514118: New client connected from 172.18.0.1:55806 as machine-3 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55816 on port 1883.
+1745514118: New client connected from 172.18.0.1:55816 as machine-4 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55824 on port 1883.
+1745514118: New connection from 172.18.0.1:55832 on port 1883.
+1745514118: New client connected from 172.18.0.1:55824 as machine-5 (p2, c1, k60).
+1745514118: New client connected from 172.18.0.1:55832 as machine-6 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55836 on port 1883.
+1745514118: New connection from 172.18.0.1:55844 on port 1883.
+1745514118: New connection from 172.18.0.1:55858 on port 1883.
+1745514118: New client connected from 172.18.0.1:55836 as machine-7 (p2, c1, k60).
+1745514118: New client connected from 172.18.0.1:55844 as machine-8 (p2, c1, k60).
+1745514118: New client connected from 172.18.0.1:55858 as machine-9 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55868 on port 1883.
+1745514118: New connection from 172.18.0.1:55878 on port 1883.
+1745514118: New client connected from 172.18.0.1:55868 as machine-10 (p2, c1, k60).
+1745514118: New client connected from 172.18.0.1:55878 as machine-11 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55882 on port 1883.
+1745514118: New client connected from 172.18.0.1:55882 as machine-12 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55888 on port 1883.
+1745514118: New client connected from 172.18.0.1:55888 as machine-13 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55890 on port 1883.
+1745514118: New client connected from 172.18.0.1:55890 as machine-14 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55904 on port 1883.
+1745514118: New connection from 172.18.0.1:55916 on port 1883.
+1745514118: New client connected from 172.18.0.1:55904 as machine-15 (p2, c1, k60).
+1745514118: New client connected from 172.18.0.1:55916 as machine-16 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55932 on port 1883.
+1745514118: New connection from 172.18.0.1:55948 on port 1883.
+1745514118: New client connected from 172.18.0.1:55932 as machine-17 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55958 on port 1883.
+1745514118: New client connected from 172.18.0.1:55948 as machine-18 (p2, c1, k60).
+1745514118: New client connected from 172.18.0.1:55958 as machine-19 (p2, c1, k60).
+1745514118: New connection from 172.18.0.1:55960 on port 1883.
+1745514118: New client connected from 172.18.0.1:55960 as machine-20 (p2, c1, k60).
+1745514187: Client machine-17 closed its connection.
+1745514187: Client machine-20 closed its connection.
+1745514187: Client machine-18 closed its connection.
+1745514187: Client machine-19 closed its connection.
+1745514187: Client machine-16 closed its connection.
+1745514187: Client machine-12 closed its connection.
+1745514187: Client machine-14 closed its connection.
+1745514187: Client machine-15 closed its connection.
+1745514187: Client machine-6 closed its connection.
+1745514187: Client machine-10 closed its connection.
+1745514187: Client machine-9 closed its connection.
+1745514187: Client machine-7 closed its connection.
+1745514187: Client machine-8 closed its connection.
+1745514187: Client machine-13 closed its connection.
+1745514187: Client machine-11 closed its connection.
+1745514187: Client machine-2 closed its connection.
+1745514187: Client machine-3 closed its connection.
+1745514187: Client machine-1 closed its connection.
+1745514187: Client machine-4 closed its connection.
+1745514187: Client machine-5 closed its connection.
+1745514205: Client auto-5B0B50D6-8197-964D-E42D-190BEEF88494 closed its connection.
+1745514206: mosquitto version 2.0.21 terminating
+1745514206: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745514365: mosquitto version 2.0.21 starting
+1745514365: Config loaded from /mosquitto/config/mosquitto.conf.
+1745514365: Opening ipv4 listen socket on port 1883.
+1745514365: Opening ipv6 listen socket on port 1883.
+1745514365: mosquitto version 2.0.21 running
+1745514370: New connection from 172.18.0.7:40465 on port 1883.
+1745514370: New client connected from 172.18.0.7:40465 as auto-60CC300B-5A88-E4F1-7DEE-AA6FE01106D9 (p2, c1, k60).
+1745514376: New connection from 172.18.0.1:59780 on port 1883.
+1745514376: New client connected from 172.18.0.1:59780 as machine-1 (p2, c1, k60).
+1745514376: New connection from 172.18.0.1:59788 on port 1883.
+1745514376: New client connected from 172.18.0.1:59788 as machine-2 (p2, c1, k60).
+1745514376: New connection from 172.18.0.1:59796 on port 1883.
+1745514376: New connection from 172.18.0.1:59812 on port 1883.
+1745514376: New connection from 172.18.0.1:59816 on port 1883.
+1745514376: New connection from 172.18.0.1:59822 on port 1883.
+1745514376: New connection from 172.18.0.1:59828 on port 1883.
+1745514376: New client connected from 172.18.0.1:59796 as machine-3 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59812 as machine-4 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59816 as machine-5 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59822 as machine-6 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59828 as machine-7 (p2, c1, k60).
+1745514376: New connection from 172.18.0.1:59842 on port 1883.
+1745514376: New connection from 172.18.0.1:59858 on port 1883.
+1745514376: New connection from 172.18.0.1:59870 on port 1883.
+1745514376: New connection from 172.18.0.1:59882 on port 1883.
+1745514376: New connection from 172.18.0.1:59898 on port 1883.
+1745514376: New connection from 172.18.0.1:59908 on port 1883.
+1745514376: New client connected from 172.18.0.1:59842 as machine-8 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59858 as machine-9 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59870 as machine-10 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59882 as machine-11 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59898 as machine-12 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59908 as machine-13 (p2, c1, k60).
+1745514376: New connection from 172.18.0.1:59924 on port 1883.
+1745514376: New connection from 172.18.0.1:59928 on port 1883.
+1745514376: New connection from 172.18.0.1:59944 on port 1883.
+1745514376: New client connected from 172.18.0.1:59924 as machine-14 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59928 as machine-15 (p2, c1, k60).
+1745514376: New connection from 172.18.0.1:59950 on port 1883.
+1745514376: New client connected from 172.18.0.1:59944 as machine-16 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59950 as machine-17 (p2, c1, k60).
+1745514376: New connection from 172.18.0.1:59956 on port 1883.
+1745514376: New connection from 172.18.0.1:59968 on port 1883.
+1745514376: New connection from 172.18.0.1:59978 on port 1883.
+1745514376: New client connected from 172.18.0.1:59956 as machine-18 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59968 as machine-19 (p2, c1, k60).
+1745514376: New client connected from 172.18.0.1:59978 as machine-20 (p2, c1, k60).
+1745514421: Client machine-14 closed its connection.
+1745514421: Client machine-17 closed its connection.
+1745514421: Client machine-16 closed its connection.
+1745514421: Client machine-18 closed its connection.
+1745514421: Client machine-15 closed its connection.
+1745514421: Client machine-20 closed its connection.
+1745514421: Client machine-19 closed its connection.
+1745514421: Client machine-11 closed its connection.
+1745514421: Client machine-13 closed its connection.
+1745514421: Client machine-12 closed its connection.
+1745514421: Client machine-1 closed its connection.
+1745514421: Client machine-5 closed its connection.
+1745514421: Client machine-10 closed its connection.
+1745514421: Client machine-4 closed its connection.
+1745514421: Client machine-9 closed its connection.
+1745514421: Client machine-3 closed its connection.
+1745514421: Client machine-2 closed its connection.
+1745514421: Client machine-6 closed its connection.
+1745514421: Client machine-8 closed its connection.
+1745514421: Client machine-7 closed its connection.
+1745514424: New connection from 172.18.0.1:57414 on port 1883.
+1745514424: New client connected from 172.18.0.1:57414 as machine-1 (p2, c1, k60).
+1745514424: New connection from 172.18.0.1:57422 on port 1883.
+1745514424: New connection from 172.18.0.1:57424 on port 1883.
+1745514424: New client connected from 172.18.0.1:57422 as machine-2 (p2, c1, k60).
+1745514424: New connection from 172.18.0.1:57434 on port 1883.
+1745514424: New client connected from 172.18.0.1:57424 as machine-3 (p2, c1, k60).
+1745514424: New client connected from 172.18.0.1:57434 as machine-4 (p2, c1, k60).
+1745514424: New connection from 172.18.0.1:57452 on port 1883.
+1745514424: New connection from 172.18.0.1:57450 on port 1883.
+1745514424: New connection from 172.18.0.1:57460 on port 1883.
+1745514424: New connection from 172.18.0.1:57462 on port 1883.
+1745514424: New connection from 172.18.0.1:57470 on port 1883.
+1745514424: New client connected from 172.18.0.1:57452 as machine-6 (p2, c1, k60).
+1745514424: New client connected from 172.18.0.1:57450 as machine-5 (p2, c1, k60).
+1745514424: New client connected from 172.18.0.1:57460 as machine-7 (p2, c1, k60).
+1745514424: New client connected from 172.18.0.1:57462 as machine-8 (p2, c1, k60).
+1745514425: New client connected from 172.18.0.1:57470 as machine-9 (p2, c1, k60).
+1745514425: New connection from 172.18.0.1:57482 on port 1883.
+1745514425: New connection from 172.18.0.1:57498 on port 1883.
+1745514425: New connection from 172.18.0.1:57514 on port 1883.
+1745514425: New connection from 172.18.0.1:57528 on port 1883.
+1745514425: New connection from 172.18.0.1:57534 on port 1883.
+1745514425: New client connected from 172.18.0.1:57482 as machine-10 (p2, c1, k60).
+1745514425: New client connected from 172.18.0.1:57498 as machine-11 (p2, c1, k60).
+1745514425: New client connected from 172.18.0.1:57514 as machine-12 (p2, c1, k60).
+1745514425: New client connected from 172.18.0.1:57528 as machine-13 (p2, c1, k60).
+1745514425: New client connected from 172.18.0.1:57534 as machine-14 (p2, c1, k60).
+1745514425: New connection from 172.18.0.1:57536 on port 1883.
+1745514425: New connection from 172.18.0.1:57546 on port 1883.
+1745514425: New connection from 172.18.0.1:57552 on port 1883.
+1745514425: New connection from 172.18.0.1:57558 on port 1883.
+1745514425: New client connected from 172.18.0.1:57536 as machine-15 (p2, c1, k60).
+1745514425: New client connected from 172.18.0.1:57546 as machine-16 (p2, c1, k60).
+1745514425: New client connected from 172.18.0.1:57552 as machine-17 (p2, c1, k60).
+1745514425: New client connected from 172.18.0.1:57558 as machine-18 (p2, c1, k60).
+1745514425: New connection from 172.18.0.1:57562 on port 1883.
+1745514425: New connection from 172.18.0.1:57576 on port 1883.
+1745514425: New client connected from 172.18.0.1:57562 as machine-19 (p2, c1, k60).
+1745514425: New client connected from 172.18.0.1:57576 as machine-20 (p2, c1, k60).
+1745514496: Client machine-16 closed its connection.
+1745514496: Client machine-20 closed its connection.
+1745514496: Client machine-18 closed its connection.
+1745514496: Client machine-19 closed its connection.
+1745514496: Client machine-15 closed its connection.
+1745514496: Client machine-2 closed its connection.
+1745514496: Client machine-1 closed its connection.
+1745514496: Client machine-12 closed its connection.
+1745514496: Client machine-9 closed its connection.
+1745514496: Client machine-13 closed its connection.
+1745514496: Client machine-14 closed its connection.
+1745514496: Client machine-6 closed its connection.
+1745514496: Client machine-10 closed its connection.
+1745514496: Client machine-17 closed its connection.
+1745514496: Client machine-7 closed its connection.
+1745514496: Client machine-8 closed its connection.
+1745514496: Client machine-11 closed its connection.
+1745514496: Client machine-3 closed its connection.
+1745514496: Client machine-4 closed its connection.
+1745514496: Client machine-5 closed its connection.
+1745514547: Client auto-60CC300B-5A88-E4F1-7DEE-AA6FE01106D9 closed its connection.
+1745514547: mosquitto version 2.0.21 terminating
+1745514547: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745514575: mosquitto version 2.0.21 starting
+1745514575: Config loaded from /mosquitto/config/mosquitto.conf.
+1745514575: Opening ipv4 listen socket on port 1883.
+1745514575: Opening ipv6 listen socket on port 1883.
+1745514575: mosquitto version 2.0.21 running
+1745514581: New connection from 172.18.0.7:53921 on port 1883.
+1745514581: New client connected from 172.18.0.7:53921 as auto-8DBB1E2F-8DA1-B719-4335-83B3C8A9CFBE (p2, c1, k60).
+1745514594: New connection from 172.18.0.1:64150 on port 1883.
+1745514594: New client connected from 172.18.0.1:64150 as machine-1 (p2, c1, k60).
+1745514594: New connection from 172.18.0.1:64160 on port 1883.
+1745514594: New connection from 172.18.0.1:64174 on port 1883.
+1745514594: New connection from 172.18.0.1:64176 on port 1883.
+1745514594: New connection from 172.18.0.1:64180 on port 1883.
+1745514594: New connection from 172.18.0.1:64190 on port 1883.
+1745514594: New connection from 172.18.0.1:64202 on port 1883.
+1745514594: New connection from 172.18.0.1:64216 on port 1883.
+1745514594: New connection from 172.18.0.1:64224 on port 1883.
+1745514594: New client connected from 172.18.0.1:64160 as machine-3 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64174 as machine-2 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64176 as machine-4 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64180 as machine-5 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64190 as machine-6 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64202 as machine-7 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64216 as machine-8 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64224 as machine-9 (p2, c1, k60).
+1745514594: New connection from 172.18.0.1:64228 on port 1883.
+1745514594: New connection from 172.18.0.1:64244 on port 1883.
+1745514594: New connection from 172.18.0.1:64250 on port 1883.
+1745514594: New connection from 172.18.0.1:64256 on port 1883.
+1745514594: New client connected from 172.18.0.1:64228 as machine-10 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64244 as machine-11 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64250 as machine-12 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64256 as machine-13 (p2, c1, k60).
+1745514594: New connection from 172.18.0.1:64264 on port 1883.
+1745514594: New connection from 172.18.0.1:64268 on port 1883.
+1745514594: New connection from 172.18.0.1:64274 on port 1883.
+1745514594: New connection from 172.18.0.1:64280 on port 1883.
+1745514594: New connection from 172.18.0.1:64292 on port 1883.
+1745514594: New client connected from 172.18.0.1:64264 as machine-14 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64268 as machine-16 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64274 as machine-15 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64280 as machine-17 (p2, c1, k60).
+1745514594: New connection from 172.18.0.1:64302 on port 1883.
+1745514594: New connection from 172.18.0.1:64318 on port 1883.
+1745514594: New client connected from 172.18.0.1:64292 as machine-18 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64302 as machine-19 (p2, c1, k60).
+1745514594: New client connected from 172.18.0.1:64318 as machine-20 (p2, c1, k60).
+1745514608: Client machine-11 closed its connection.
+1745514608: Client machine-1 closed its connection.
+1745514608: Client machine-6 closed its connection.
+1745514608: Client machine-8 closed its connection.
+1745514608: Client machine-20 closed its connection.
+1745514608: Client machine-12 closed its connection.
+1745514608: Client machine-2 closed its connection.
+1745514608: Client machine-3 closed its connection.
+1745514608: Client machine-13 closed its connection.
+1745514608: Client machine-4 closed its connection.
+1745514608: Client machine-14 closed its connection.
+1745514608: Client machine-5 closed its connection.
+1745514608: Client machine-15 closed its connection.
+1745514608: Client machine-9 closed its connection.
+1745514608: Client machine-16 closed its connection.
+1745514608: Client machine-10 closed its connection.
+1745514608: Client machine-17 closed its connection.
+1745514608: Client machine-18 closed its connection.
+1745514608: Client machine-19 closed its connection.
+1745514608: Client machine-7 closed its connection.
+1745514644: Client auto-8DBB1E2F-8DA1-B719-4335-83B3C8A9CFBE closed its connection.
+1745514644: mosquitto version 2.0.21 terminating
+1745514644: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745514663: mosquitto version 2.0.21 starting
+1745514663: Config loaded from /mosquitto/config/mosquitto.conf.
+1745514663: Opening ipv4 listen socket on port 1883.
+1745514663: Opening ipv6 listen socket on port 1883.
+1745514663: mosquitto version 2.0.21 running
+1745514668: New connection from 172.18.0.7:58927 on port 1883.
+1745514668: New client connected from 172.18.0.7:58927 as auto-FE372AD3-5CB2-E923-A2BD-CC74C0EC2C7D (p2, c1, k60).
+1745514686: New connection from 172.18.0.1:62908 on port 1883.
+1745514686: New client connected from 172.18.0.1:62908 as machine-1 (p2, c1, k60).
+1745514686: New connection from 172.18.0.1:62920 on port 1883.
+1745514686: New connection from 172.18.0.1:62930 on port 1883.
+1745514686: New client connected from 172.18.0.1:62930 as machine-3 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:62920 as machine-2 (p2, c1, k60).
+1745514686: New connection from 172.18.0.1:62938 on port 1883.
+1745514686: New client connected from 172.18.0.1:62938 as machine-4 (p2, c1, k60).
+1745514686: New connection from 172.18.0.1:62944 on port 1883.
+1745514686: New connection from 172.18.0.1:62956 on port 1883.
+1745514686: New connection from 172.18.0.1:62962 on port 1883.
+1745514686: New connection from 172.18.0.1:62966 on port 1883.
+1745514686: New connection from 172.18.0.1:62982 on port 1883.
+1745514686: New client connected from 172.18.0.1:62944 as machine-5 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:62956 as machine-6 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:62962 as machine-7 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:62966 as machine-8 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:62982 as machine-9 (p2, c1, k60).
+1745514686: New connection from 172.18.0.1:62988 on port 1883.
+1745514686: New connection from 172.18.0.1:63004 on port 1883.
+1745514686: New connection from 172.18.0.1:63010 on port 1883.
+1745514686: New connection from 172.18.0.1:63024 on port 1883.
+1745514686: New connection from 172.18.0.1:63038 on port 1883.
+1745514686: New client connected from 172.18.0.1:62988 as machine-10 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:63004 as machine-11 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:63010 as machine-12 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:63038 as machine-14 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:63024 as machine-13 (p2, c1, k60).
+1745514686: New connection from 172.18.0.1:63046 on port 1883.
+1745514686: New connection from 172.18.0.1:63058 on port 1883.
+1745514686: New connection from 172.18.0.1:63066 on port 1883.
+1745514686: New connection from 172.18.0.1:63072 on port 1883.
+1745514686: New client connected from 172.18.0.1:63046 as machine-15 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:63058 as machine-16 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:63066 as machine-17 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:63072 as machine-18 (p2, c1, k60).
+1745514686: New connection from 172.18.0.1:63078 on port 1883.
+1745514686: New connection from 172.18.0.1:63090 on port 1883.
+1745514686: New client connected from 172.18.0.1:63078 as machine-19 (p2, c1, k60).
+1745514686: New client connected from 172.18.0.1:63090 as machine-20 (p2, c1, k60).
+1745514705: Client machine-4 closed its connection.
+1745514705: Client machine-6 closed its connection.
+1745514705: Client machine-14 closed its connection.
+1745514705: Client machine-15 closed its connection.
+1745514705: Client machine-16 closed its connection.
+1745514705: Client machine-17 closed its connection.
+1745514705: Client machine-18 closed its connection.
+1745514705: Client machine-19 closed its connection.
+1745514705: Client machine-7 closed its connection.
+1745514705: Client machine-5 closed its connection.
+1745514705: Client machine-2 closed its connection.
+1745514705: Client machine-8 closed its connection.
+1745514705: Client machine-20 closed its connection.
+1745514705: Client machine-9 closed its connection.
+1745514705: Client machine-10 closed its connection.
+1745514705: Client machine-11 closed its connection.
+1745514705: Client machine-12 closed its connection.
+1745514705: Client machine-13 closed its connection.
+1745514705: Client machine-1 closed its connection.
+1745514705: Client machine-3 closed its connection.
+1745514721: Client auto-FE372AD3-5CB2-E923-A2BD-CC74C0EC2C7D closed its connection.
+1745514722: mosquitto version 2.0.21 terminating
+1745514722: Saving in-memory database to /mosquitto/data//mosquitto.db.

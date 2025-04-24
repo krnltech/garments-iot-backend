@@ -1,0 +1,71 @@
+version: '3.9'
+
+services:
+  mqtt_gateway:
+    build:
+      context: ./apps/mqtt_gateway
+    container_name: mqtt_gateway
+    env_file: .env
+    environment:
+      MQTT_BROKER: mqtt
+      TSDB_HOST: timescaledb
+    depends_on:
+      - mqtt
+      - timescaledb
+    volumes:
+      - ./shared:/app/shared
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    env_file: .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  timescaledb:
+    image: timescale/timescaledb-ha:pg15-latest
+    container_name: timescaledb
+    env_file: .env
+    ports:
+      - "5433:5432"
+    volumes:
+      - timescaledbdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  mqtt:
+    image: eclipse-mosquitto
+    container_name: mqtt
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./config/mosquitto:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - timescaledb
+    volumes:
+      - grafana-storage:/var/lib/grafana
+
+volumes:
+  pgdata:
+  timescaledbdata:
+  grafana-storage:
