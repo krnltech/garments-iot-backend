@@ -8,6 +8,7 @@ from passlib.context import CryptContext
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from typing import Optional, List
+from contextlib import asynccontextmanager
 import os
 import logging
 from dotenv import load_dotenv
@@ -124,11 +125,20 @@ class WorkerResponse(BaseModel):
     class Config:
         from_attributes = True
 
+# Lifespan context manager
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
+    Base.metadata.create_all(bind=engine)
+    yield
+    # Shutdown (if needed)
+
 # FastAPI app
 app = FastAPI(
     title="Garments IoT Backend API",
     description="Backend API for IoT-integrated garments production tracking with OAuth2 authentication",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 # CORS middleware
@@ -139,11 +149,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Create tables
-@app.on_event("startup")
-async def startup_event():
-    Base.metadata.create_all(bind=engine)
 
 # Dependency to get database session
 def get_db():
