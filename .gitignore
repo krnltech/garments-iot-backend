@@ -1,1 +1,3 @@
 .env
+apps/mqtt_gateway/test/bundles_query_log.txt
+mosquitto/data/mosquitto.db
