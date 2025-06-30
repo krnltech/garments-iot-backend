@@ -48,3 +48,25 @@ class MachineWithTargetResponse(MachineResponse):
     
     class Config:
         from_attributes = True
+
+class WorkerTargetBase(BaseModel):
+    target: int
+
+class WorkerTargetCreate(WorkerTargetBase):
+    id_worker: int
+
+class WorkerTargetUpdate(WorkerTargetBase):
+    pass
+
+class WorkerTargetResponse(WorkerTargetBase):
+    id_worker: int
+    worker: Optional[WorkerResponse] = None
+    
+    class Config:
+        from_attributes = True
+
+class WorkerWithTargetResponse(WorkerResponse):
+    worker_target: Optional[WorkerTargetResponse] = None
+    
+    class Config:
+        from_attributes = True

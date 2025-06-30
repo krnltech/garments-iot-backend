@@ -43,3 +43,12 @@ class MachineTarget(Base):
     
     # Relationship to get machine details
     machine = relationship("Machine", backref="target")
+
+class WorkerTarget(Base):
+    __tablename__ = "worker_target"
+    
+    id_worker = Column(Integer, ForeignKey("worker.id"), primary_key=True)
+    target = Column(Integer, nullable=False)
+    
+    # Relationship to get worker details
+    worker = relationship("Worker", backref="target")
