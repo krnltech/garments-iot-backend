@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException, Depends, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy import create_engine, Column, String, Integer, DateTime, Boolean, text
-from sqlalchemy.orm import sessionmaker, Session, declarative_base
+from sqlalchemy import create_engine, Column, String, Integer, DateTime, Boolean, text, ForeignKey
+from sqlalchemy.orm import sessionmaker, Session, declarative_base, relationship
 from pydantic import BaseModel, EmailStr, Field
 from passlib.context import CryptContext
 from jose import JWTError, jwt
@@ -79,6 +79,15 @@ class Worker(Base):
     name = Column(String(36), nullable=False)
     designation = Column(String(36), nullable=False)
 
+class MachineTarget(Base):
+    __tablename__ = "machine_target"
+    
+    id_machine = Column(Integer, ForeignKey("machine.id"), primary_key=True)
+    target = Column(Integer, nullable=False)
+    
+    # Relationship to get machine details
+    machine = relationship("Machine", backref="target")
+
 # Pydantic Models
 class UserBase(BaseModel):
     username: str = Field(..., min_length=3, max_length=50)
@@ -121,6 +130,28 @@ class WorkerResponse(BaseModel):
     id: int
     name: str
     designation: str
+    
+    class Config:
+        from_attributes = True
+
+class MachineTargetBase(BaseModel):
+    target: int
+
+class MachineTargetCreate(MachineTargetBase):
+    id_machine: int
+
+class MachineTargetUpdate(MachineTargetBase):
+    pass
+
+class MachineTargetResponse(MachineTargetBase):
+    id_machine: int
+    machine: Optional[MachineResponse] = None
+    
+    class Config:
+        from_attributes = True
+
+class MachineWithTargetResponse(MachineResponse):
+    machine_target: Optional[MachineTargetResponse] = None
     
     class Config:
         from_attributes = True
@@ -369,6 +400,142 @@ async def get_dashboard_summary(
         }
     except Exception as e:
         logger.error(f"Error fetching dashboard summary: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+# Machine Target endpoints
+@app.get("/machines-with-targets", response_model=List[MachineWithTargetResponse])
+async def get_machines_with_targets(
+    skip: int = 0,
+    limit: int = 100,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Get all machines with their targets"""
+    try:
+        machines = db.query(Machine).offset(skip).limit(limit).all()
+        result = []
+        for machine in machines:
+            target = db.query(MachineTarget).filter(MachineTarget.id_machine == machine.id).first()
+            machine_dict = {
+                "id": machine.id,
+                "label": machine.label,
+                "location": machine.location,
+                "machine_target": {
+                    "id_machine": target.id_machine,
+                    "target": target.target
+                } if target else None
+            }
+            result.append(machine_dict)
+        return result
+    except Exception as e:
+        logger.error(f"Error fetching machines with targets: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.get("/machine-targets", response_model=List[MachineTargetResponse])
+async def get_machine_targets(
+    skip: int = 0,
+    limit: int = 100,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Get all machine targets"""
+    try:
+        targets = db.query(MachineTarget).offset(skip).limit(limit).all()
+        return targets
+    except Exception as e:
+        logger.error(f"Error fetching machine targets: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.get("/machine-targets/{machine_id}", response_model=MachineTargetResponse)
+async def get_machine_target(
+    machine_id: int,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Get machine target by machine ID"""
+    try:
+        target = db.query(MachineTarget).filter(MachineTarget.id_machine == machine_id).first()
+        if not target:
+            raise HTTPException(status_code=404, detail="Machine target not found")
+        return target
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error fetching machine target: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.post("/machine-targets", response_model=MachineTargetResponse)
+async def create_machine_target(
+    machine_target: MachineTargetCreate,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Create a new machine target"""
+    try:
+        # Check if machine exists
+        machine = db.query(Machine).filter(Machine.id == machine_target.id_machine).first()
+        if not machine:
+            raise HTTPException(status_code=404, detail="Machine not found")
+        
+        # Check if target already exists
+        existing_target = db.query(MachineTarget).filter(MachineTarget.id_machine == machine_target.id_machine).first()
+        if existing_target:
+            raise HTTPException(status_code=400, detail="Machine target already exists")
+        
+        db_target = MachineTarget(**machine_target.model_dump())
+        db.add(db_target)
+        db.commit()
+        db.refresh(db_target)
+        return db_target
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error creating machine target: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.put("/machine-targets/{machine_id}", response_model=MachineTargetResponse)
+async def update_machine_target(
+    machine_id: int,
+    machine_target: MachineTargetUpdate,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Update a machine target"""
+    try:
+        db_target = db.query(MachineTarget).filter(MachineTarget.id_machine == machine_id).first()
+        if not db_target:
+            raise HTTPException(status_code=404, detail="Machine target not found")
+        
+        for key, value in machine_target.model_dump(exclude_unset=True).items():
+            setattr(db_target, key, value)
+        db.commit()
+        db.refresh(db_target)
+        return db_target
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error updating machine target: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.delete("/machine-targets/{machine_id}")
+async def delete_machine_target(
+    machine_id: int,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Delete a machine target"""
+    try:
+        db_target = db.query(MachineTarget).filter(MachineTarget.id_machine == machine_id).first()
+        if not db_target:
+            raise HTTPException(status_code=404, detail="Machine target not found")
+        
+        db.delete(db_target)
+        db.commit()
+        return {"message": "Machine target deleted successfully"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error deleting machine target: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 # Admin-only endpoints

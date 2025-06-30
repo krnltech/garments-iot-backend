@@ -1,7 +1,8 @@
 """
 Database models for IoT entities
 """
-from sqlalchemy import Column, String, Integer, DateTime
+from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
+from sqlalchemy.orm import relationship
 from ..db.database import Base
 
 class WorkerScan(Base):
@@ -33,3 +34,12 @@ class Worker(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(36), nullable=False)
     designation = Column(String(36), nullable=False)
+
+class MachineTarget(Base):
+    __tablename__ = "machine_target"
+    
+    id_machine = Column(Integer, ForeignKey("machine.id"), primary_key=True)
+    target = Column(Integer, nullable=False)
+    
+    # Relationship to get machine details
+    machine = relationship("Machine", backref="target")
