@@ -88,6 +88,15 @@ class MachineTarget(Base):
     # Relationship to get machine details
     machine = relationship("Machine", backref="target")
 
+class WorkerTarget(Base):
+    __tablename__ = "worker_target"
+    
+    id_worker = Column(Integer, ForeignKey("worker.id"), primary_key=True)
+    target = Column(Integer, nullable=False)
+    
+    # Relationship to get worker details
+    worker = relationship("Worker", backref="target")
+
 # Pydantic Models
 class UserBase(BaseModel):
     username: str = Field(..., min_length=3, max_length=50)
@@ -152,6 +161,28 @@ class MachineTargetResponse(MachineTargetBase):
 
 class MachineWithTargetResponse(MachineResponse):
     machine_target: Optional[MachineTargetResponse] = None
+    
+    class Config:
+        from_attributes = True
+
+class WorkerTargetBase(BaseModel):
+    target: int
+
+class WorkerTargetCreate(WorkerTargetBase):
+    id_worker: int
+
+class WorkerTargetUpdate(WorkerTargetBase):
+    pass
+
+class WorkerTargetResponse(WorkerTargetBase):
+    id_worker: int
+    worker: Optional[WorkerResponse] = None
+    
+    class Config:
+        from_attributes = True
+
+class WorkerWithTargetResponse(WorkerResponse):
+    worker_target: Optional[WorkerTargetResponse] = None
     
     class Config:
         from_attributes = True
@@ -552,6 +583,138 @@ async def get_all_users(
         logger.error(f"Error fetching users: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+# Worker Target endpoints
+@app.get("/workers-with-targets", response_model=List[WorkerWithTargetResponse])
+async def get_workers_with_targets(
+    skip: int = 0,
+    limit: int = 100,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Get all workers with their targets"""
+    try:
+        workers = db.query(Worker).offset(skip).limit(limit).all()
+        result = []
+        for worker in workers:
+            target = db.query(WorkerTarget).filter(WorkerTarget.id_worker == worker.id).first()
+            worker_dict = {
+                "id": worker.id,
+                "name": worker.name,
+                "designation": worker.designation,
+                "worker_target": {
+                    "id_worker": target.id_worker,
+                    "target": target.target
+                } if target else None
+            }
+            result.append(worker_dict)
+        return result
+    except Exception as e:
+        logger.error(f"Error fetching workers with targets: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.get("/worker-targets", response_model=List[WorkerTargetResponse])
+async def get_worker_targets(
+    skip: int = 0,
+    limit: int = 100,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Get all worker targets"""
+    try:
+        targets = db.query(WorkerTarget).offset(skip).limit(limit).all()
+        return targets
+    except Exception as e:
+        logger.error(f"Error fetching worker targets: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.get("/worker-targets/{worker_id}", response_model=WorkerTargetResponse)
+async def get_worker_target(
+    worker_id: int,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Get worker target by worker ID"""
+    try:
+        target = db.query(WorkerTarget).filter(WorkerTarget.id_worker == worker_id).first()
+        if not target:
+            raise HTTPException(status_code=404, detail="Worker target not found")
+        return target
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error fetching worker target: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.post("/worker-targets", response_model=WorkerTargetResponse)
+async def create_worker_target(
+    worker_target: WorkerTargetCreate,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Create a new worker target"""
+    try:
+        # Check if worker exists
+        worker = db.query(Worker).filter(Worker.id == worker_target.id_worker).first()
+        if not worker:
+            raise HTTPException(status_code=404, detail="Worker not found")
+        
+        # Check if target already exists
+        existing_target = db.query(WorkerTarget).filter(WorkerTarget.id_worker == worker_target.id_worker).first()
+        if existing_target:
+            raise HTTPException(status_code=400, detail="Worker target already exists")
+        
+        db_target = WorkerTarget(**worker_target.model_dump())
+        db.add(db_target)
+        db.commit()
+        db.refresh(db_target)
+        return db_target
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error creating worker target: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.put("/worker-targets/{worker_id}", response_model=WorkerTargetResponse)
+async def update_worker_target(
+    worker_id: int,
+    worker_target: WorkerTargetUpdate,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Update a worker target"""
+    try:
+        db_target = db.query(WorkerTarget).filter(WorkerTarget.id_worker == worker_id).first()
+        if not db_target:
+            raise HTTPException(status_code=404, detail="Worker target not found")
+        
+        for key, value in worker_target.model_dump(exclude_unset=True).items():
+            setattr(db_target, key, value)
+        db.commit()
+        db.refresh(db_target)
+        return db_target
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error updating worker target: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.delete("/worker-targets/{worker_id}")
+async def delete_worker_target(
+    worker_id: int,
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Delete a worker target"""
+    try:
+        db_target = db.query(WorkerTarget).filter(WorkerTarget.id_worker == worker_id).first()
+        if not db_target:
+            raise HTTPException(status_code=404, detail="Worker target not found")
+        
+        db.delete(db_target)
+        db.commit()
+        return {"message": "Worker target deleted successfully"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error deleting worker target: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
