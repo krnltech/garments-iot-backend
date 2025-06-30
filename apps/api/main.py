@@ -144,10 +144,11 @@ class WorkerResponse(BaseModel):
         from_attributes = True
 
 class MachineTargetBase(BaseModel):
-    target: int
+    target: int = Field(..., ge=0, description="Target value (set to 0 to delete)")
 
 class MachineTargetCreate(MachineTargetBase):
     id_machine: int
+    target: int = Field(..., gt=0, description="Target value must be greater than 0 for creation")
 
 class MachineTargetUpdate(MachineTargetBase):
     pass
@@ -166,10 +167,11 @@ class MachineWithTargetResponse(MachineResponse):
         from_attributes = True
 
 class WorkerTargetBase(BaseModel):
-    target: int
+    target: int = Field(..., ge=0, description="Target value (set to 0 to delete)")
 
 class WorkerTargetCreate(WorkerTargetBase):
     id_worker: int
+    target: int = Field(..., gt=0, description="Target value must be greater than 0 for creation")
 
 class WorkerTargetUpdate(WorkerTargetBase):
     pass
@@ -531,12 +533,19 @@ async def update_machine_target(
     current_user: User = Depends(get_current_active_user),
     db: Session = Depends(get_db)
 ):
-    """Update a machine target"""
+    """Update a machine target (set to 0 to delete)"""
     try:
         db_target = db.query(MachineTarget).filter(MachineTarget.id_machine == machine_id).first()
         if not db_target:
             raise HTTPException(status_code=404, detail="Machine target not found")
         
+        # If target is set to 0, delete the target
+        if machine_target.target == 0:
+            db.delete(db_target)
+            db.commit()
+            return {"message": "Machine target deleted successfully (set to 0)"}
+        
+        # Otherwise, update the target
         for key, value in machine_target.model_dump(exclude_unset=True).items():
             setattr(db_target, key, value)
         db.commit()
@@ -681,12 +690,19 @@ async def update_worker_target(
     current_user: User = Depends(get_current_active_user),
     db: Session = Depends(get_db)
 ):
-    """Update a worker target"""
+    """Update a worker target (set to 0 to delete)"""
     try:
         db_target = db.query(WorkerTarget).filter(WorkerTarget.id_worker == worker_id).first()
         if not db_target:
             raise HTTPException(status_code=404, detail="Worker target not found")
         
+        # If target is set to 0, delete the target
+        if worker_target.target == 0:
+            db.delete(db_target)
+            db.commit()
+            return {"message": "Worker target deleted successfully (set to 0)"}
+        
+        # Otherwise, update the target
         for key, value in worker_target.model_dump(exclude_unset=True).items():
             setattr(db_target, key, value)
         db.commit()
