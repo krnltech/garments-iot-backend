@@ -198,6 +198,15 @@ class MachineStatusResponse(BaseModel):
     class Config:
         from_attributes = True
 
+class WorkerStatusResponse(BaseModel):
+    employee_id: str
+    bundle_count: int
+    bundles_per_minute: Optional[float]
+    last_bundle_time_seconds: Optional[float]
+    
+    class Config:
+        from_attributes = True
+
 # Lifespan context manager
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -504,6 +513,68 @@ async def get_machine_status(
         return machine_status
     except Exception as e:
         logger.error(f"Error fetching machine status: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@app.get("/worker-status", response_model=List[WorkerStatusResponse])
+async def get_worker_status(
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Get worker status with bundle analysis (protected endpoint)"""
+    try:
+        query = text("""
+            WITH bundles_today AS (
+                SELECT employee_id, time
+                FROM bundle
+                WHERE DATE(time) = CURRENT_DATE
+            ),
+            bundle_counts AS (
+                SELECT 
+                    employee_id,
+                    COUNT(*) AS bundle_count,
+                    EXTRACT(EPOCH FROM (MAX(time) - MIN(time))) / 60 AS duration_minutes
+                FROM bundles_today
+                GROUP BY employee_id
+            ),
+            last_two_bundles AS (
+                SELECT 
+                    employee_id,
+                    time,
+                    ROW_NUMBER() OVER (PARTITION BY employee_id ORDER BY time DESC) AS rn
+                FROM bundles_today
+            ),
+            last_bundle_times AS (
+                SELECT 
+                    l1.employee_id,
+                    EXTRACT(EPOCH FROM (l1.time - l2.time)) AS last_bundle_time_seconds
+                FROM last_two_bundles l1
+                JOIN last_two_bundles l2
+                  ON l1.employee_id = l2.employee_id AND l1.rn = 1 AND l2.rn = 2
+            )
+            SELECT 
+                bc.employee_id,
+                bc.bundle_count,
+                ROUND(bc.bundle_count / NULLIF(bc.duration_minutes, 0), 2) AS bundles_per_minute,
+                COALESCE(lbt.last_bundle_time_seconds, 0) AS last_bundle_time_seconds
+            FROM bundle_counts bc
+            LEFT JOIN last_bundle_times lbt ON bc.employee_id = lbt.employee_id
+            ORDER BY bc.employee_id;
+        """)
+        
+        result = db.execute(query)
+        worker_status = [
+            {
+                "employee_id": row.employee_id,
+                "bundle_count": row.bundle_count or 0,
+                "bundles_per_minute": float(row.bundles_per_minute) if row.bundles_per_minute else None,
+                "last_bundle_time_seconds": float(row.last_bundle_time_seconds) if row.last_bundle_time_seconds else None
+            }
+            for row in result
+        ]
+        
+        return worker_status
+    except Exception as e:
+        logger.error(f"Error fetching worker status: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 # Machine Target endpoints
