@@ -7,7 +7,7 @@ from typing import List
 import logging
 
 from ...db.database import get_db
-from ...schemas.iot import MachineResponse, WorkerResponse, DashboardSummary
+from ...schemas.iot import MachineResponse, WorkerResponse, DashboardSummary, MachineStatusResponse
 from ...crud import iot as iot_crud
 from ...services.auth import get_current_active_user
 from ...models.user import User
@@ -53,4 +53,17 @@ async def get_dashboard_summary(
         return summary_data
     except Exception as e:
         logger.error(f"Error fetching dashboard summary: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@router.get("/machine-status", response_model=List[MachineStatusResponse])
+async def get_machine_status(
+    current_user: User = Depends(get_current_active_user),
+    db: Session = Depends(get_db)
+):
+    """Get machine status with bundle analysis (protected endpoint)"""
+    try:
+        machine_status = iot_crud.get_machine_status(db)
+        return machine_status
+    except Exception as e:
+        logger.error(f"Error fetching machine status: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")

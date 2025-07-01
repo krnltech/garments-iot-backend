@@ -122,3 +122,55 @@ def delete_worker_target(db: Session, worker_id: int) -> bool:
         db.commit()
         return True
     return False
+
+def get_machine_status(db: Session) -> List[Dict[str, Any]]:
+    """Get machine status with bundle analysis"""
+    query = text("""
+        WITH bundles_today AS (
+            SELECT machine_id, time
+            FROM bundle
+            WHERE DATE(time) = CURRENT_DATE
+        ),
+        bundle_counts AS (
+            SELECT 
+                machine_id,
+                COUNT(*) AS bundle_count,
+                EXTRACT(EPOCH FROM (MAX(time) - MIN(time))) / 60 AS duration_minutes
+            FROM bundles_today
+            GROUP BY machine_id
+        ),
+        last_two_bundles AS (
+            SELECT 
+                machine_id,
+                time,
+                ROW_NUMBER() OVER (PARTITION BY machine_id ORDER BY time DESC) AS rn
+            FROM bundles_today
+        ),
+        last_bundle_times AS (
+            SELECT 
+                l1.machine_id,
+                EXTRACT(EPOCH FROM (l1.time - l2.time)) AS last_bundle_time_seconds
+            FROM last_two_bundles l1
+            JOIN last_two_bundles l2
+              ON l1.machine_id = l2.machine_id AND l1.rn = 1 AND l2.rn = 2
+        )
+        SELECT 
+            bc.machine_id,
+            bc.bundle_count,
+            ROUND(bc.bundle_count / NULLIF(bc.duration_minutes, 0), 2) AS bundles_per_minute,
+            COALESCE(lbt.last_bundle_time_seconds, 0) AS last_bundle_time_seconds
+        FROM bundle_counts bc
+        LEFT JOIN last_bundle_times lbt ON bc.machine_id = lbt.machine_id
+        ORDER BY bc.machine_id;
+    """)
+    
+    result = db.execute(query)
+    return [
+        {
+            "machine_id": row.machine_id,
+            "bundle_count": row.bundle_count or 0,
+            "bundles_per_minute": float(row.bundles_per_minute) if row.bundles_per_minute else None,
+            "last_bundle_time_seconds": float(row.last_bundle_time_seconds) if row.last_bundle_time_seconds else None
+        }
+        for row in result
+    ]

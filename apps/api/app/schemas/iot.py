@@ -70,3 +70,12 @@ class WorkerWithTargetResponse(WorkerResponse):
     
     class Config:
         from_attributes = True
+
+class MachineStatusResponse(BaseModel):
+    machine_id: str
+    bundle_count: int
+    bundles_per_minute: Optional[float]
+    last_bundle_time_seconds: Optional[float]
+    
+    class Config:
+        from_attributes = True
