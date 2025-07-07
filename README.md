@@ -1,81 +1,208 @@
-#   Unified Production Tracking System
+# Garments IoT Backend
 
-##   Overview
+A comprehensive IoT-integrated garments production tracking system with real-time monitoring, user management, and performance analytics.
 
-This system is designed to integrate machines, employees (workers), and administrators in a unified platform to track machine activity, monitor employee performance, and provide analytics through RFID technology. [cite: 1] The goal is to improve transparency, automate data collection, and optimize production efficiency. [cite: 2]
+## Project Structure
 
-##   System Actors
+```
+garments-iot-backend/
+├── apps/                           # Application modules
+│   ├── api/                        # FastAPI application
+│   │   ├── app/                    # Modular API structure (if using)
+│   │   └── main.py                 # Main FastAPI application
+│   ├── edge-devices/              # Edge device code
+│   ├── event_worker/              # Event processing worker
+│   └── mqtt_gateway/              # MQTT gateway service
+├── config/                        # Configuration files
+│   └── mosquitto/                 # MQTT broker configuration
+├── docs/                          # Documentation
+│   ├── API_DOCUMENTATION.md       # Complete API documentation
+│   ├── README.md                  # Original project README
+│   └── WORKER_TARGETS_IMPLEMENTATION.md  # Implementation details
+├── seeders/                       # Database seeders
+│   ├── add_sample_bundle_data.py  # Bundle data seeder
+│   ├── add_sample_data.py         # General sample data
+│   └── seed_database.py           # Database initialization
+├── tests/                         # Test files
+│   ├── test_backend.py            # Backend API tests
+│   ├── test_enhanced_features.py  # Enhanced features tests
+│   ├── test_machine_targets.py    # Machine targets tests
+│   └── test_worker_targets.py     # Worker targets tests
+├── docker-compose.yaml            # Docker services configuration
+├── init.sql                       # Database initialization script
+├── poetry.lock                    # Python dependencies lock file
+├── pyproject.toml                 # Python project configuration
+└── publisher.py                   # MQTT publisher utility
+```
 
-###   2.1   Machine
+## Quick Start
 
-Machines are physical workstations integrated with RFID and sensor modules to track: [cite: 3]
+### Prerequisites
+- Python 3.8+
+- PostgreSQL with TimescaleDB extension
+- Docker (optional)
 
-* Assigned user (employee)
-* Associated devices (e.g., cloth bundle)
-* Target vs. actual progress
-* Real-time activity and status
-* Feedback to employee (via light indicators)
+### Setup
 
-###   2.2   Admin
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd garments-iot-backend
+   ```
 
-Administrators will have access to system configurations, analytics, and data management features. [cite: 3, 4] Their responsibilities include: [cite: 4]
+2. **Install dependencies**
+   ```bash
+   poetry install
+   # or
+   pip install -r requirements.txt
+   ```
 
-1.  RFID Management: Issue, assign, and manage RFID cards to employees. [cite: 4]
-2.  Target Setup: Assign machine-wise production targets. [cite: 4]
-3.  Analytics Dashboard:
-    * Machine Status Monitoring: Active/Idle/Error tracking [cite: 5]
-    * Employee Work Rate: Hourly performance insights [cite: 5]
-    * Production Analysis: Line-wise productivity metrics [cite: 5]
-    * Alerts & Warnings: Triggered by underperformance or anomalies [cite: 5]
-4.  Employee Management: Maintain and edit employee records. [cite: 5]
-5.  Machine Layout Mapping: Maintain physical row and column positions for machine arrangement. [cite: 6]
+3. **Setup database**
+   ```bash
+   # Start services with Docker
+   docker-compose up -d
+   
+   # Initialize database
+   python seeders/seed_database.py
+   
+   # Add sample data
+   python seeders/add_sample_data.py
+   python seeders/add_sample_bundle_data.py
+   ```
 
-###   2.3   Employee (Worker)
+4. **Start the API server**
+   ```bash
+   python apps/api/main.py
+   ```
 
-Employees will interact with the system through RFID and scanning interfaces: [cite: 7]
+5. **Access the application**
+   - API: http://localhost:8000
+   - API Docs: http://localhost:8000/docs
+   - API Schema: http://localhost:8000/openapi.json
 
-1.  RFID Scanning: Scan RFID at the machine to start and end a work session. [cite: 7]
-2.  Feedback Reception: Receive real-time feedback (visual/light indicators) based on performance. [cite: 8]
-3.  Bundle Scanning: Scan cloth bundles at the start and end of processing for traceability. [cite: 9]
+## Features
 
-##   Functional Requirements
+### Core Functionality
+- **User Authentication**: JWT-based authentication with role management
+- **Machine Management**: CRUD operations for production machines
+- **Worker Management**: CRUD operations for factory workers
+- **Target Management**: Performance targets for machines and workers
+- **Real-time Monitoring**: Live status tracking with bundle analysis
+- **Dashboard**: Summary statistics and analytics
 
-|   Feature ID   |   Description                                               |
-| :----------- | :-------------------------------------------------------- |
-|   FR1        |   Track machine usage, status, and current operator         |
-|   FR2        |   Admin can create, issue, and deactivate RFID cards         |
-|   FR3        |   Admin sets production targets per machine                 |
-|   FR4        |   System triggers alerts on underperformance or errors       |
-|   FR5        |   Employees must scan RFID to begin and end tasks           |
-|   FR6        |   Ensure traceability by scanning bundles at start/end       |
-|   FR7        |   Machines provide real-time feedback via lights             |
-|   FR8        |   Show machine/employee statistics and trends              |
-|   FR9        |   Admin can manage employee profiles and records            |
-|   FR10       |   Visual mapping of machine positions in rows/columns       |
+### API Endpoints
+- **Authentication**: `/auth/*` - User registration, login, profile
+- **Machines**: `/machines*` - Machine CRUD and status monitoring
+- **Workers**: `/workers*` - Worker CRUD and status monitoring
+- **Targets**: `/machine-targets*`, `/worker-targets*` - Target management
+- **Status**: `/machine-status`, `/worker-status` - Real-time monitoring
+- **Dashboard**: `/dashboard/summary` - Analytics dashboard
+- **Admin**: `/admin/*` - Administrative functions
 
-##   Non-Functional Requirements
+### Real-time Features
+- Machine status monitoring with production rates
+- Worker productivity tracking
+- Bundle analysis with timing metrics
+- Auto-refreshing status indicators
+- Performance analytics
 
-|   ID   |   Requirement        |   Description                                           |
-| :----- | :----------------- | :---------------------------------------------------- |
-|   NFR1 |   Real-time Performance   |   System must process scans and update dashboards instantly   |
-|   NFR2 |   Scalability          |   Support for adding machines and employees dynamically       |
-|   NFR3 |   Security             |   Access control for admin panel, data encryption           |
-|   NFR4 |   Reliability          |   Ensure system uptime and data integrity                  |
-|   NFR5 |   Usability            |   Intuitive interfaces for both admins and workers           |
+## Documentation
 
-##   System Modules
+- **[Complete API Documentation](docs/API_DOCUMENTATION.md)** - Detailed API reference
+- **[Worker Targets Implementation](docs/WORKER_TARGETS_IMPLEMENTATION.md)** - Implementation details
+- **[Original README](docs/README.md)** - Original project documentation
 
-* RFID Integration Module [cite: 11, 12]
-* Machine Interface & Status Module [cite: 11, 12]
-* Employee Tracking Module [cite: 11, 12]
-* Production Target & Bundle Tracking [cite: 12]
-* Feedback System (Lights, Alerts) [cite: 12]
-* Admin Dashboard & Analytics [cite: 12]
-* Data Management & Reporting [cite: 12]
+## Testing
 
-##   Future Considerations
+Run the test suite:
 
-* Mobile-based scanning support [cite: 13]
-* Integration with ERP systems [cite: 13]
-* Predictive maintenance alerts [cite: 13]
-* Biometric integration for authentication [cite: 13]
+```bash
+# Run all tests
+python -m pytest tests/
+
+# Run specific test files
+python tests/test_backend.py
+python tests/test_machine_targets.py
+python tests/test_worker_targets.py
+python tests/test_enhanced_features.py
+```
+
+## Database Schema
+
+The system uses PostgreSQL with TimescaleDB for time-series data:
+
+- **users** - User accounts and authentication
+- **machine** - Production machines
+- **worker** - Factory workers
+- **machine_target** - Performance targets for machines
+- **worker_target** - Performance targets for workers
+- **bundle** - Production records (time-series)
+- **worker_scan** - Worker activity tracking (time-series)
+
+## Architecture
+
+### Backend Services
+- **FastAPI Application** - Main REST API server
+- **PostgreSQL + TimescaleDB** - Primary database
+- **MQTT Gateway** - IoT device communication
+- **Event Worker** - Background processing
+
+### Security
+- JWT authentication with 30-minute expiration
+- BCrypt password hashing
+- Role-based access control (admin/user)
+- Input validation with Pydantic
+- CORS configuration for cross-origin requests
+
+## Development
+
+### Code Structure
+- **Modular Design** - Separated concerns with clear boundaries
+- **Type Safety** - Full type hints with Pydantic models
+- **Error Handling** - Comprehensive error responses
+- **Logging** - Structured logging throughout
+- **Testing** - Unit tests for all major functionality
+
+### Adding New Features
+1. Update database schema in `init.sql`
+2. Add/update models in `apps/api/main.py`
+3. Implement CRUD operations
+4. Add API endpoints
+5. Write tests in `tests/`
+6. Update documentation
+
+## Deployment
+
+### Production Considerations
+- Update CORS origins for production domains
+- Configure proper environment variables
+- Set up SSL/TLS certificates
+- Implement rate limiting
+- Configure logging and monitoring
+- Set up database backups
+
+### Environment Variables
+```bash
+SECRET_KEY=your-secret-key-here
+TIMESCALE_USER=postgres
+TIMESCALE_PASSWORD=password
+TIMESCALE_HOST=localhost
+TIMESCALE_DB=metrics
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Update documentation
+6. Submit a pull request
+
+## License
+
+[Add your license information here]
+
+## Support
+
+For questions and support, please refer to the documentation in the `docs/` folder or contact the development team.
