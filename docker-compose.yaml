@@ -1,4 +1,23 @@
 services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: garments_api
+    env_file: .env
+    ports:
+      - "8000:8000"
+    environment:
+      TIMESCALE_HOST: timescaledb
+      TIMESCALE_USER: ${TIMESCALE_USER}
+      TIMESCALE_PASSWORD: ${TIMESCALE_PASSWORD}
+      TIMESCALE_DB: ${TIMESCALE_DB}
+    depends_on:
+      - timescaledb
+    restart: unless-stopped
+    networks:
+      - garments-network
+
   mqtt_gateway:
     build:
       context: ./apps/mqtt_gateway
@@ -12,6 +31,8 @@ services:
       - timescaledb
     volumes:
       - ./shared:/app/shared
+    networks:
+      - garments-network
 
   # postgres:
   #   image: postgres:15
@@ -31,6 +52,8 @@ services:
     volumes:
       - timescaledbdata:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - garments-network
 
   mqtt:
     image: eclipse-mosquitto
@@ -42,6 +65,8 @@ services:
       - ./config/mosquitto:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
+    networks:
+      - garments-network
 
   # rabbitmq:
   #   image: rabbitmq:3-management
@@ -67,3 +92,7 @@ volumes:
   pgdata:
   timescaledbdata:
   grafana-storage:
+
+networks:
+  garments-network:
+    driver: bridge
